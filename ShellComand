@@ -1,6 +1,6 @@
 ##Josh's Setup
 
-sudo pacman -Sy blender wine-staging steam mono jre-openjdk jre-openjdk-headless jdk-openjdk tmux g++ libconfig godot bluez-plugins gimp vim-airline-themes vim-ansible vim-jedi vim-nerdtree vim-nerdcommenter vim-spell-en vim-lutris 
+sudo pacman -Sy blender wine-staging steam mono jre-openjdk jre-openjdk-headless jdk-openjdk tmux libconfig godot bluez-plugins gimp vim-airline-themes vim-ansible vim-jedi vim-nerdtree vim-nerdcommenter vim-spell-en lutris  
 
 
-sudo yay -Sy nvidia-beta opencl-nvidia-beta nvidia-utils-beta nvidia-settings-beta vim-youcompleteme-git vim-nerdtree-syntax-highlight vim-fzf-git vim-lightline-git vim-lightline-edge-git game-devices-udev xbox-generic-controller official-gamecube-controller-adapter-rules rpcs3-udev vkd3d-valve-git lib32-vkd3d-valve-git protonup-git  
+yay -Sy nvidia-beta opencl-nvidia-beta nvidia-utils-beta nvidia-settings-beta vim-youcompleteme-git vim-nerdtree-syntax-highlight vim-fzf-git vim-lightline-git vim-lightline-edge-git game-devices-udev xbox-generic-controller official-gamecube-controller-adapter-rules rpcs3-udev vkd3d-valve-git lib32-vkd3d-valve-git protonup-git brave-bin xf86-video-nouveau-blacklist-git	  
