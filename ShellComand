@@ -7,3 +7,8 @@ yay -Sy vim-airline vim-youcompleteme-git vim-nerdtree-syntax-highlight vim-fzf-
 
 
 ##nvidia-beta opencl-nvidia-beta nvidia-utils-beta nvidia-settings-beta 
+
+##This could help with updating
+sudo pacman -Sy archlinux-keyring
+yay -Sy linux-steam-integration scd gamemode-git  
+sudo udevadm trigger 
