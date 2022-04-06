@@ -12,3 +12,57 @@ yay -Sy vim-airline vim-youcompleteme-git vim-nerdtree-syntax-highlight vim-fzf-
 sudo pacman -Sy archlinux-keyring
 yay -Sy linux-steam-integration scd gamemode-git  
 sudo udevadm trigger 
+
+## AMD Vulkan
+
+sudo pacman -S vulkan-radeon lib32-vulkan-radeon (for RADV included in MESA)
+
+sudo pacman -S amdvlk lib32-amdvlk (for AMDVLK Open Source)
+
+yay -S vulkan-amdgpu-pro lib32-vulkan-amdgpu-pro (for AMDVLK Closed Source)
+
+## You can then list your installed vulkan drivers like so:
+
+ls /usr/share/vulkan/icd.d/
+
+## Then we can choose via the VK_ICD_FILENAMES environment variable which driver we want to be using:
+
+export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/amd_icd64.json (for AMDVLK Open Source)
+export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/radeon_icd.x86_64.json (for RADV)
+
+####HOW TO CHANGE DRIVERS######
+
+Anyone with expertise in how environment variables work can give a clarification on this?
+
+Thank you for any help you can provide
+
+EDITED TLDR with answers thanks to /u/K900_ /u/jazztickets /u/gardotd426
+
+How to set up a vulkan driver permanently?
+
+Add both 32bit and 64bit Vulkan drivers to your /etc/environment file, in my case for RADV:
+
+ sudo nano /etc/environment
+
+# This file is parsed by pam_env module
+#
+# Syntax: simple "KEY=VAL" pairs on separate lines
+#
+VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/radeon_icd.i686.json:/usr/share/vulkan/icd.d/radeon_icd.x86_64.json
+Alternatively you can set up the same in environment.d as it is the modern way going forward, but check your distro documentation as on Arch /etc/environment.d doesn't exist and ~/.config/environment.d/ is recommended only for user wide environment variables by the Arch Wiki and we want it to be global / system wide.
+
+
+
+How to run a Steam game with a different vulkan driver?
+
+In the steam application, select your game > properties > "set launch options..." and for AMDVLK insert: VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/amd_icd32.json:/usr/share/vulkan/icd.d/amd_icd64.json %command%
+
+How to launch an application from the terminal with a different vulkan driver?
+
+Very similar to steam, again for AMDVLK it would be:
+
+VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/amd_icd32.json:/usr/share/vulkan/icd.d/amd_icd64.json "your application.sh or ./application + any arguments"
+
+Note: in case you have a game/application that doesn't require a launcher you can also edit it's .Desktop file but in this case you need to add env in front of Exec= , example for AMDVLK:
+
+Exec=env VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/amd_icd32.json:/usr/share/vulkan/icd.d/amd_icd64.json "your application.sh or ./application + any arguments"
