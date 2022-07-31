@@ -6,7 +6,8 @@ sudo pacman -Sy blender wine-staging steam mono jre-openjdk jre-openjdk-headless
 yay -Sy vim-airline vim-youcompleteme-git vim-nerdtree-syntax-highlight vim-fzf-git vim-lightline-git vim-lightline-edge-git game-devices-udev xbox-generic-controller official-gamecube-controller-adapter-rules rpcs3-udev vkd3d-valve-git lib32-vkd3d-valve-git protonup-git brave-bin xf86-video-nouveau-blacklist-git dxvk-bin linux-steam-integration steam-wine-git scd     
 
 
-##nvidia-beta opencl-nvidia-beta nvidia-utils-beta nvidia-settings-beta 
+##nvidia-beta opencl-nvidia-beta nvidia-utils-beta nvidia-settings-beta
+## prime nvidia-prime-select-git
 
 ##This could help with updating
 sudo pacman -Sy archlinux-keyring
