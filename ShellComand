@@ -72,3 +72,25 @@ VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/amd_icd32.json:/usr/share/vulkan/icd.d/
 Note: in case you have a game/application that doesn't require a launcher you can also edit it's .Desktop file but in this case you need to add env in front of Exec= , example for AMDVLK:
 
 Exec=env VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/amd_icd32.json:/usr/share/vulkan/icd.d/amd_icd64.json "your application.sh or ./application + any arguments"
+
+##If fonts are missing, try this ##
+ sudo pacman -Sy powerline-common
+ sudo pacman -Sy powerline-fonts
+ sudo pacman -Sy vim-airline-themes
+ yay -Sy ttf-merriweather-sans
+ yay -Sy ttf-meslo-nerd-font-powerlevel10k 
+  yay -Sy ttf-unifont
+  yay -Sy ttf-twemoji
+  yay -Sy ttf-ms-fonts
+  sudo pacman -Sy awesome-terminal-fonts 
+  sudo pacman -S texlive-core texlive-fontsextra 
+  sudo yay -Sy powerline-console-fonts 
+  sudo yay -Sy powerline-fonts-git  
+  sudo yay -Sy vim-airline-themes-git  
+  yay -Sy themix-full-git 
+  
+  
+  
+ 
+ 
+
