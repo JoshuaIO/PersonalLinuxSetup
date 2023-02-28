@@ -19,6 +19,8 @@ sudo udevadm trigger
 #Fonts
 # yay -Sy fonts-meta-base fonts-meta-extended-lt
 
+nerd-fonts-meta
+
 ## AMD Vulkan
 
 sudo pacman -S vulkan-radeon lib32-vulkan-radeon (for RADV included in MESA)
