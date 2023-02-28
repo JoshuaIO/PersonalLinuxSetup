@@ -106,5 +106,8 @@ Exec=env VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/amd_icd32.json:/usr/share/vulk
  
   https://wiki.archlinux.org/title/Powerline
  
+ #OH MY ZSH
+ https://github.com/ohmyzsh/ohmyzsh/wiki
  
+ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
