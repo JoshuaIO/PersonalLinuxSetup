@@ -31,7 +31,7 @@ echo "${yay_repo}"
 
 
 
-git clone yay_repo
+git clone "${yay_repo}"
 
 #Check if the Directory Exist, installs and builds yay
 if [[ -d "./yay/" ]]; then
