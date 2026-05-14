@@ -108,12 +108,12 @@ function downloadPackage ()
 		all)
 			#echo "Gets all Pacman and yay packages"
 			sudo pacman -Sy steam blender wine-staging jre-openjdk-headless jdk-openjdk libconfig godot bluez-plugins gimp vim-airline-themes vim-ansible vim-jedi vim-nerdtree vim-nerdcommenter vim-spell-en lutris krita vlc 
-			yay -Sy vim-airline vim-youcompleteme-git vim-nerdtree-syntax-highlight vim-fzf-git vim-lightline-git vim-lightline-edge-git game-devices-udev xbox-generic-controller official-gamecube-controller-adapter-rules rpcs3-udev protonup-git fonts-meta-base fonts-meta-extended-lt nerd-fonts-meta gimp winetricks bottles pcsx2-latest-bin cemu-git ryujinx-canary sudachi 	
+			yay -Sy vim-airline vim-youcompleteme-git vim-nerdtree-syntax-highlight vim-fzf-git vim-lightline-git vim-lightline-edge-git game-devices-udev xbox-generic-controller official-gamecube-controller-adapter-rules rpcs3-udev protonup-git fonts-meta-base fonts-meta-extended-lt nerd-fonts-meta gimp winetricks bottles pcsx2-latest-bin ryujinx-canary sudachi 	
 			;;
 		game)
 			#echo "Gets game utilities"
 			sudo pacman -Sy steam wine-staging winetricks
-		       	yay -Sy game-devices-udev xbox-generic-controller official-gamecube-controller-adapter-rules rpcs3-udev protonup-git bottles pcsx2-latest-bin cemu-git ryujinx-canary sudachi 	
+		       	yay -Sy game-devices-udev xbox-generic-controller official-gamecube-controller-adapter-rules rpcs3-udev protonup-git bottles pcsx2-latest-bin ryujinx-canary sudachi 	
 			;;
 		media)
 			#echo "Gets media stuff"
